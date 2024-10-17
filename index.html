@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vaahaka Online</title>
+  <link rel="icon" href="vahakalogo.png" type="image/x-icon">
+  <script async src="https://tally.so/widgets/embed.js"></script>
+  <style>
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('Montserrat-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Faruma';
+      src: url('Faruma.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Mv_MAG_Round_Bold';
+      src: url('Mv_MAG_Round_Bold.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #000000;
+      font-family: 'Mv_MAG_Round_Bold', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      position: relative;
+      background-color: #daffdd;
+      color: rgb(0, 0, 0);
+      font-family: 'Mv_MAG_Round_Bold', sans-serif;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .logo {
+      width: 60px;
+      height: 60px;
+    }
+
+    .header-buttons {
+      display: flex;
+      align-items: center;
+    }
+
+    .header-buttons button {
+      background-color: #000000;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      margin-left: 10px;
+      font-family: 'Mv_MAG_Round_Bold', sans-serif;
+      font-size: 15px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .playlist-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .story {
+      border: 1px solid #464646;
+      background-color: #ffffff;
+      font-family: 'Mv_MAG_Round_Bold', sans-serif;
+      font-size: 20px;
+      padding: 10px;
+      margin: 10px;
+      text-align: center;
+      max-width: 250px;
+    }
+
+
+
+    .story img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .story p {
+      font-weight: bold;
+      margin: 8px 0;
+    }
+
+    .story a {
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+    }
+
+    .footer {
+      background-color: #daffdd;
+      color: rgb(0, 0, 0);
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .footer-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 0 20px;
+    }
+
+    .footer-section h4 {
+      margin-bottom: 10px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .footer-center a {
+      display: block;
+      margin: 5px 0;
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+    }
+
+    .footer-right {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .footer-icon {
+      margin-left: 10px;
+      font-size: 20px;
+    }
+
+    .footer-copyright {
+      background-color: #daffdd;
+      font-family: 'Montserrat', sans-serif;
+      text-align: left;
+      margin-top: 0px;
+      padding-top: 10px;
+      border-top: 1px solid rgb(0, 0, 0);
+    }
+
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo-container" onclick="window.location.href='index.html';">
+      <img class="logo" src="vahakalogo.png" alt="Logo">
+    </div>
+    <div class="header-buttons">
+      <button data-tally-open="w8aPVA" data-tally-width="800" data-tally-overlay="1" data-tally-emoji-text="📚" data-tally-emoji-animation="heart-beat" data-tally-auto-close="1000">ވާހަކަ އަޕްލޯޑް ކުރުމަށް</button>
+      <button onclick="location.href='about.html'">މައުލޫމާތު</button>
+      <button onclick="openAdminPanel()">އެޑްމިނިސްޓްރޭޓަރ</button>
+    </div>
+  </header>
+
+  <div class="playlist-container" id="playlist">
+    <!-- story items will be added here dynamically -->
+  </div>
+
+  <div class="footer">
+    <div class="footer-left footer-section">
+      <h4>Contact Info</h4>
+      <p>Email: zainulaabidheenyoosuf@gmail.com</p>
+      <p>Phone: 7471289</p>
+    </div>
+    <div class="footer-center footer-section">
+      <h4>The Portal</h4>
+      <a href="terms.html">Terms of Use</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="writing-guide.html">Story Writing Guide</a>
+    </div>
+    <div class="footer-right footer-section">
+      <a href="vahakalogo.png" download><img src="https://i.postimg.cc/DZ4qgq17/playgoogle.png" alt="Download APK"></a>
+    </div>
+  </div>
+
+  <div class="footer-copyright">
+    &copy; 2024 Dhi Vaahaka. All rights reserved.
+  </div>
+
+  <script>
+    const stories = [
+      { name: "ކަޅު ބުޅާ", author: "އައިމިނަތު ލީނާ", image: "story001.png", url: "0001.html" },
+      { name: "މާތް ނަބިއްޔާ މުޙައްމަދު صلى الله عليه وسلم : އޯގާތެރިކަމުގެ އެންމެ ފުރިހަމަ ނަމޫނާ", author: "ޒައިނުލްޢާބިދީން ޔޫސުފް", image: "story002.png", url: "0002.html" },
+    ];
+
+    const playlistContainer = document.getElementById('playlist');
+    stories.forEach(story => {
+      const storyDiv = document.createElement('div');
+      storyDiv.className = 'story';
+      storyDiv.innerHTML = `
+        <a href="${story.url}">
+          <img src="${story.image}" alt="${story.name}">
+          <p>${story.name}</p>
+          <p>ލިޔުނީ: ${story.author}</p>
+        </a>
+      `;
+      playlistContainer.appendChild(storyDiv);
+    });
+
+    function openAdminPanel() {
+      const password = prompt("Enter the password:");
+      if (password === "z2a4i6n8") {
+        alert("I am not dumb to hide a password in a part you can access from inspect 😂 but i did just put this there...");
+      } else if (password !== null) {
+        alert("Incorrect password");
+      }
+    }
+  </script>
+</body>
+</html>
