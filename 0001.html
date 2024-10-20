@@ -69,9 +69,17 @@
       border: none;
       padding: 8px 12px;
       margin-left: 10px;
-      font-family: 'Faruma', sans-serif;
+      font-family: 'Mv_MAG_Round_Bold', sans-serif;
+      font-size: 15px;
       cursor: pointer;
       border-radius: 5px;
+    }
+
+    /* Responsive font size for header buttons */
+    @media (max-width: 600px) {
+      .header-buttons button {
+        font-size: 13px;
+      }
     }
 
     .footer {
@@ -126,6 +134,8 @@
     .main-image {
       max-width: 100%;
       height: auto;
+      border-radius: 30px; /* Adjust as needed */
+      overflow: hidden;
     }
 
     .main-title {
