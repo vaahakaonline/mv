@@ -75,6 +75,13 @@
       border-radius: 5px;
     }
 
+    /* Responsive font size for header buttons */
+    @media (max-width: 600px) {
+      .header-buttons button {
+        font-size: 13px;
+      }
+    }
+
     .playlist-container {
       display: flex;
       flex-wrap: wrap;
@@ -91,13 +98,22 @@
       margin: 10px;
       text-align: center;
       max-width: 250px;
+      border-radius: 25px !important; /* Adjust the value for the desired curvature */
+      overflow: hidden; /* Ensures content inside the container doesn't overflow */
     }
 
-
+    /* Responsive layout for story cards */
+    @media (max-width: 600px) {
+      .story {
+        max-width: 100%;
+      }
+    }
 
     .story img {
       max-width: 100%;
       height: auto;
+      border-radius: 15px; /* Adjust as needed */
+      overflow: hidden;
     }
 
     .story p {
@@ -164,7 +180,7 @@
 <body>
   <header class="header">
     <div class="logo-container" onclick="window.location.href='index.html';">
-      <img class="logo" src="vahakalogo.png" alt="Logo">
+      <img class="logo" src="vahakalogo.png" alt="Dhi Vaahaka Logo">
     </div>
     <div class="header-buttons">
       <button data-tally-open="w8aPVA" data-tally-width="800" data-tally-overlay="1" data-tally-emoji-text="📚" data-tally-emoji-animation="heart-beat" data-tally-auto-close="1000">ވާހަކަ އަޕްލޯޑް ކުރުމަށް</button>
