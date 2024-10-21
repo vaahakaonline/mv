@@ -175,6 +175,16 @@
       border-top: 1px solid rgb(0, 0, 0);
     }
 
+    /* Mobile styles */
+    @media (max-width: 600px) {
+      .footer-section p.email {
+        display: none; /* Hide the email address */
+      }
+
+      .footer-section a.email {
+        display: block; /* Show "Send a Mail" link */
+      }
+    }
   </style>
 </head>
 <body>
@@ -196,7 +206,8 @@
   <div class="footer">
     <div class="footer-left footer-section">
       <h4>Contact Info</h4>
-      <p>Email: zainulaabidheenyoosuf@gmail.com</p>
+      <p class="email">Email: zainulaabidheenyoosuf@gmail.com</p>
+      <a class="email" href="mailto:zainulaabidheenyoosuf@gmail.com">Send a Mail</a>
       <p>Phone: 7471289</p>
     </div>
     <div class="footer-center footer-section">
