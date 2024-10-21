@@ -1,3 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vaahaka Online</title>
+  <link rel="icon" href="vahakalogo.png" type="image/x-icon">
+  <script async src="https://tally.so/widgets/embed.js"></script>
+  <style>
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('Montserrat-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Faruma';
+      src: url('Faruma.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Mv_MAG_Round_Bold';
+      src: url('Mv_MAG_Round_Bold.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #000000;
+      font-family: 'Mv_MAG_Round_Bold', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      position: relative;
+      background-color: #daffdd;
+      color: rgb(0, 0, 0);
+      font-family: 'Mv_MAG_Round_Bold', sans-serif;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .logo {
+      width: 60px;
+      height: 60px;
+    }
+
+    .header-buttons {
+      display: flex;
+      align-items: center;
+    }
+
+    .header-buttons button {
+      background-color: #000000;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      margin-left: 10px;
+      font-family: 'Mv_MAG_Round_Bold', sans-serif;
+      font-size: 15px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    /* Responsive font size for header buttons */
+    @media (max-width: 600px) {
+      .header-buttons button {
+        font-size: 13px;
+      }
+    }
+
+    .playlist-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .story {
+      border: 1px solid #464646;
+      background-color: #ffffff;
+      font-family: 'Mv_MAG_Round_Bold', sans-serif;
+      font-size: 20px;
+      padding: 10px;
+      margin: 10px;
+      text-align: center;
+      max-width: 250px;
+      border-radius: 25px !important; /* Adjust the value for the desired curvature */
+      overflow: hidden; /* Ensures content inside the container doesn't overflow */
+    }
+
+    /* Responsive layout for story cards */
+    @media (max-width: 600px) {
+      .story {
+        max-width: 100%;
+      }
+    }
+
+    .story img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 15px; /* Adjust as needed */
+      overflow: hidden;
+    }
+
+    .story p {
+      font-weight: bold;
+      margin: 8px 0;
+    }
+
+    .story a {
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+    }
+
     .footer {
       background-color: #daffdd;
       color: rgb(0, 0, 0);
