@@ -177,12 +177,12 @@
 
     /* Mobile styles */
     @media (max-width: 600px) {
-      .footer-section p.email {
+      .footer-section .email {
         display: none; /* Hide the email address */
       }
 
-      .footer-section a.email {
-        display: block; /* Show "Send a Mail" link */
+      .footer-section .email-link {
+        display: block; /* Show the email link */
       }
     }
   </style>
@@ -206,8 +206,7 @@
   <div class="footer">
     <div class="footer-left footer-section">
       <h4>Contact Info</h4>
-      <p class="email">Email: zainulaabidheenyoosuf@gmail.com</p>
-      <a class="email" href="mailto:zainulaabidheenyoosuf@gmail.com">Send a Mail</a>
+      <p class="email">Email: <span class="email-link" style="display: none;"><a href="mailto:zainulaabidheenyoosuf@gmail.com">Send a Mail</a></span></p>
       <p>Phone: 7471289</p>
     </div>
     <div class="footer-center footer-section">
