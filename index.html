@@ -177,8 +177,8 @@
 
     /* Mobile styles */
     @media (max-width: 600px) {
-      .footer-section .email {
-        display: none; /* Hide the email address */
+      .footer-section .full-email {
+        display: none; /* Hide the full email address */
       }
 
       .footer-section .email-link {
@@ -206,7 +206,8 @@
   <div class="footer">
     <div class="footer-left footer-section">
       <h4>Contact Info</h4>
-      <p class="email">Email: <span class="email-link" style="display: none;"><a href="mailto:zainulaabidheenyoosuf@gmail.com">Send a Mail</a></span></p>
+      <p class="full-email">Email: zainulaabidheenyoosuf@gmail.com</p>
+      <p class="email-link" style="display: none;">Email: <a href="mailto:zainulaabidheenyoosuf@gmail.com">Send a Mail</a></p>
       <p>Phone: 7471289</p>
     </div>
     <div class="footer-center footer-section">
@@ -235,7 +236,7 @@
         <a href="${story.url}">
           <img src="${story.image}" alt="${story.name}">
           <p>${story.name}</p>
-          <p>ލިޔުނީ: ${story.author}</p>
+          <p>ލިޔާހަކު: ${story.author}</p>
         </a>
       `;
       playlistContainer.appendChild(storyDiv);
